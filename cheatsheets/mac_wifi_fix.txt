@@ -1,0 +1,6 @@
+in /Library/Preferences/SystemConfiguration/, move the following files out:
+
+com.apple.airport.preferences.plist com.apple.network.identification.plist
+com.apple.wifi.message-tracer.plist
+NetworkInterfaces.plist
+preferences.plist

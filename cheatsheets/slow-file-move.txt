@@ -1,0 +1,1 @@
+for file in $(ls tempor/); do mv tempor/$file incoming/; echo "moved tempor/${file} to incoming/"; sleep 15; done

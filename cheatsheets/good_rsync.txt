@@ -1,0 +1,1 @@
+rsync -avznrR */*/snapshots/src host:/data/BACKUPS/dest
