@@ -1,0 +1,6 @@
+/usr/local/var/postgres
+/usr/local/Cellar/postgresql/9.5.1/
+/usr/local/var/postgres/pg_log
+
+in psql, run:
+SHOW config_file;

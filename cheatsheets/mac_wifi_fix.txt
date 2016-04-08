@@ -1,6 +1,4 @@
-in /Library/Preferences/SystemConfiguration/, move the following files out:
-
-com.apple.airport.preferences.plist com.apple.network.identification.plist
-com.apple.wifi.message-tracer.plist
-NetworkInterfaces.plist
-preferences.plist
+sudo mv /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist ~/Desktop/ sudo mv /Library/Preferences/SystemConfiguration/com.apple.network.identification.plist ~/Desktop/
+sudo mv /Library/Preferences/SystemConfiguration/com.apple.wifi.message-tracer.plist ~/Desktop/
+sudo mv /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist ~/Desktop/
+sudo mv /Library/Preferences/SystemConfiguration/preferences.plist ~/Desktop/

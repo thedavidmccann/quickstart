@@ -1,0 +1,2 @@
+openssl pkcs12 -in yourP12File.pfx -nocerts -out privateKey.pem
+openssl pkcs12 -in yourP12File.pfx -clcerts -nokeys -out publicCert.pem
