@@ -1,11 +1,12 @@
 #!/bin/bash
 # Bootstrap a new goddamn Mac
-
+mkdir ~/.bash_profile.d
 mkdir -p ~/Documents/Dev/Projects
 mkdir ~/Documents/Dev/Environment
 ln -s ~/Documents/Dev/Projects/quickstart/cheatsheets ~/Documents/cheatsheets
 ln -s ~/Documents/Dev/Projects/quickstart/BashFu ~/Documents/Dev/Projects/BashFu 
-mv bash_profile ~/.bash_profile
+ln -s bash_profile ~/.bash_profile
+cp .git-completion.bash ~/
 source ~/.bash_profile
 
 # https://wincent.com/wiki/Git_quickstart

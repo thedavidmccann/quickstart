@@ -1,0 +1,3 @@
+UPDATE pg_attribute SET atttypmod = 35+4
+WHERE attrelid = 'TABLE1'::regclass
+AND attname = 'COL1';

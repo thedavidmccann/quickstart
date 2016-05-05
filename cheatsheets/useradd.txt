@@ -1,4 +1,10 @@
+DONT USE USERADD:
+
 groupadd david
 mkdir /home/david
 useradd -d /home/david -g david -G sudo,otherstuff david
 passwd david
+
+
+USE THIS:
+adduser name-of-user
