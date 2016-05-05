@@ -1,0 +1,20 @@
+[user]
+	name = David McCann
+	email = dmccann@fastorientation.com
+[color]
+	ui = auto
+# https://wincent.com/wiki/Git_quickstart
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+        purr = pull --rebase
+[color "diff"]
+	meta = cyan black
+	plain = white black
+	frag = yellow black
+	func = magenta black
+	old = red black
+	new = green black
+	commit = yellow black
+	whitespace = black red
