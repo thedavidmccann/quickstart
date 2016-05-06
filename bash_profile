@@ -13,10 +13,10 @@ alias denv='cd ~/Documents/Dev/Environment'
 alias workoff='source ~/Documents/Dev/Projects/BashFu/Environments/UnSet.bash'
 alias workonPROJECT='source ~/Documents/Dev/Projects/BashFu/Environments/PROJECT.bash'
 alias disapprove='echo ಠ_ಠ'
-alias review='git fetch && git log --reverse --since="1 day ago" --all | tig'
+alias review='git fetch && tig --all --reverse --since=1.day'
 export PATH=$PATH:$GRADLE_HOME/bin:/Users/dmccann/Documents/Dev/Environment/PostgreSQL/9.4/bin
 export JAVA_HOME=$(/usr/libexec/java_home)
-
+export TERM=xterm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 if [ -f ~/.git-completion.bash ]; then
