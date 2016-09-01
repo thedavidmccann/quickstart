@@ -13,10 +13,16 @@ alias denv='cd ~/Documents/Dev/Environment'
 alias workoff='source ~/Documents/Dev/Projects/BashFu/Environments/UnSet.bash'
 alias workonPROJECT='source ~/Documents/Dev/Projects/BashFu/Environments/PROJECT.bash'
 alias disapprove='echo ಠ_ಠ'
+alias wreview='git fetch && tig --all --reverse --since=3.days'
 alias review='git fetch && tig --all --reverse --since=1.day'
 export PATH=$PATH:$GRADLE_HOME/bin:/Users/dmccann/Documents/Dev/Environment/PostgreSQL/9.4/bin
 export JAVA_HOME=$(/usr/libexec/java_home)
 export TERM=xterm
+export MONO_PATH=/Library/Frameworks/Mono.framework/Libraries/mono/4.5
+export NUNIT3_PATH=/Users/dmccann/Documents/Dev/Environment/NUnit-3.4.1/bin
+export WORKON_HOME=/Users/dmccann/Documents/Dev/Environment/python
+source /usr/local/bin/virtualenvwrapper.sh
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 if [ -f ~/.git-completion.bash ]; then

@@ -1,0 +1,2 @@
+                RewriteCond %{QUERY_STRING} id=31415&
+                RewriteRule ^/source/link https://somewhereelse.com/target/link

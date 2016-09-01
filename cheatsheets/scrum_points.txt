@@ -1,0 +1,6 @@
+1 point: half a day
+2 points: a day - day and a half
+3 points: half a week
+5 points: a week
+8 points: 2 weeks/full sprint for one person
+anything bigger should be broken up into multiple stories

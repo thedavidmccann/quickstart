@@ -1,0 +1,3 @@
+makecert.exe -r -pe -ss RogCertStore -n "CN=RogTestCert" RogTestCert.cer
+signtool.exe sign /s RogCertStore /n RogTestCert myfile.exe
+
