@@ -9,6 +9,7 @@
 	ci = commit
 	co = checkout
         purr = pull --rebase
+        br = branch
 [color "diff"]
 	meta = cyan black
 	plain = white black
