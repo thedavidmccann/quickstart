@@ -7,7 +7,22 @@ if (length($0) > 14) { if (NF>4) print $1 "/" $2 "/.../" $(NF-1) "/" $NF;
 else if (NF>3) print $1 "/" $2 "/.../" $NF;
 else print $1 "/.../" $NF; }
 else print $0;}'"'"')'
-PS1='$(whoami)@$(hostname -s):$(eval "echo ${MYPS}") $ '
+
+function parse_git_branch {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+GREEN="$(tput setaf 2)"
+GOLD="$(tput setaf 3)"
+BLUE="$(tput setaf 4)"
+MAGENTA="$(tput setaf 5)"
+CYAN="$(tput setaf 6)"
+WHITE="$(tput setaf 7)"
+BLACK="$(tput setaf 0)"
+RED="$(tput setaf 9)"
+RESET="$(tput sgr0)"
+
+PS1='$(eval "echo ${MYPS}")${CYAN}$(parse_git_branch)${RESET} ${WHITE}$ ${RESET}'
 alias proj='cd ~/Documents/Dev/Projects'
 alias denv='cd ~/Documents/Dev/Environment'
 alias workoff='source ~/Documents/Dev/Projects/BashFu/Environments/UnSet.bash'
