@@ -22,7 +22,7 @@ BLACK="$(tput setaf 0)"
 RED="$(tput setaf 9)"
 RESET="$(tput sgr0)"
 
-PS1='$(eval "echo ${MYPS}")${CYAN}$(parse_git_branch)${RESET} ${WHITE}$ ${RESET}'
+PS1='$(eval "echo ${MYPS}")\[${CYAN}\]$(parse_git_branch)\[${RESET}\] \[${WHITE}\]$ \[${RESET}\]'
 alias proj='cd ~/Documents/Dev/Projects'
 alias denv='cd ~/Documents/Dev/Environment'
 alias workoff='source ~/Documents/Dev/Projects/BashFu/Environments/UnSet.bash'
