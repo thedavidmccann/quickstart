@@ -24,4 +24,4 @@
 	whitespace = black red
 
 [core]
-	autocrlf = true
+	autocrlf = input

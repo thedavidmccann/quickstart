@@ -30,6 +30,7 @@ alias workonPROJECT='source ~/Documents/Dev/Projects/BashFu/Environments/PROJECT
 alias disapprove='echo ಠ_ಠ'
 alias wreview='git fetch && tig --all --reverse --since=3.days'
 alias review='git fetch && tig --all --reverse --since=1.day'
+alias tdb='tail -f /usr/local/var/postgres/pg_log/$(ls -tr /usr/local/var/postgres/pg_log | tail -1)'
 export PATH=$PATH:$GRADLE_HOME/bin:/Users/dmccann/Documents/Dev/Environment/PostgreSQL/9.4/bin
 export JAVA_HOME=$(/usr/libexec/java_home)
 export TERM=xterm
