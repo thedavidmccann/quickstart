@@ -1,10 +1,10 @@
 #!/bin/bash
 # Bootstrap a new goddamn Mac
-mkdir ~/.bash_profile.d
+mkdir -p ~/.bash_profile.d
 mkdir -p ~/Documents/Dev/Projects
 mv ../quickstart ~/Documents/Dev/Projects
 
-mkdir ~/Documents/Dev/Environment
+mkdir -p ~/Documents/Dev/Environment
 ln -s ~/Documents/Dev/Projects/quickstart/cheatsheets ~/Documents/cheatsheets
 ln -s ~/Documents/Dev/Projects/quickstart/BashFu ~/Documents/Dev/Projects/BashFu 
 
