@@ -64,3 +64,8 @@ function bak {
     mv $1 $1.bak
   fi
 }
+
+function mkurl {
+  echo "[InternetShortcut]
+URL=$1" >> "${2}.url"
+}
