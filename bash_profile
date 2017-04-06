@@ -31,7 +31,11 @@ alias disapprove='echo ಠ_ಠ'
 alias wreview='git fetch && tig --all --reverse --since=3.days'
 alias review='git fetch && tig --all --reverse --since=1.day'
 alias tdb='tail -f /usr/local/var/postgres/pg_log/$(ls -tr /usr/local/var/postgres/pg_log | tail -1)'
-export PATH=$PATH:/usr/local/opt/apr/bin:$GRADLE_HOME/bin:/Users/dmccann/Documents/Dev/Environment/PostgreSQL/9.4/bin:/Users/dmccann/.rvm/bin
+alias dunnet='emacs -batch -l dunnet'
+alias sha1='shasum -a 1 '
+alias sha256='shasum -a 256 '
+
+export PATH=$PATH:/usr/local/opt/apr/bin:$GRADLE_HOME/bin:/Users/dmccann/Documents/Dev/Environment/PostgreSQL/9.4/bin:/Users/dmccann/.rvm/bin:/Users/dmccann/Documents/Dev/Environment/sqlite-tools-osx-x86-3170000
 export JAVA_HOME=$(/usr/libexec/java_home)
 export TERM=xterm
 export MONO_PATH=/Library/Frameworks/Mono.framework/Libraries/mono/4.5
