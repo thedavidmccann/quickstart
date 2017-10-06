@@ -34,8 +34,9 @@ alias tdb='tail -f /usr/local/var/postgres/pg_log/$(ls -tr /usr/local/var/postgr
 alias dunnet='emacs -batch -l dunnet'
 alias sha1='shasum -a 1 '
 alias sha256='shasum -a 256 '
+alias pg='postgres -D /usr/local/var/postgres &'
 
-export PATH=$PATH:/usr/local/opt/apr/bin:$GRADLE_HOME/bin:/Users/dmccann/Documents/Dev/Environment/PostgreSQL/9.4/bin:/Users/dmccann/.rvm/bin:/Users/dmccann/Documents/Dev/Environment/sqlite-tools-osx-x86-3170000
+export PATH=$PATH:/usr/local/opt/apr/bin:$GRADLE_HOME/bin:$HOME/Documents/Dev/Environment/PostgreSQL/9.4/bin:/Users/dmccann/.rvm/bin:$HOME/Documents/Dev/Environment/sqlite-tools-osx-x86-3170000:$HOME/Documents/Dev/Environment/apache-maven-3.3.9/bin:$HOME/Documents/Dev/Environment/apache-ant-1.10.1/bin
 export JAVA_HOME=$(/usr/libexec/java_home)
 export TERM=xterm
 export MONO_PATH=/Library/Frameworks/Mono.framework/Libraries/mono/4.5
@@ -73,3 +74,8 @@ function mkurl {
   echo "[InternetShortcut]
 URL=$1" >> "${2}.url"
 }
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
