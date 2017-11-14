@@ -9,6 +9,7 @@
 	ci = commit
 	co = checkout
         purr = pull --rebase
+        pom = push origin master
         br = branch
 	cp = cherry-pick
 	unstage = reset HEAD --
