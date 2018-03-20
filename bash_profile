@@ -36,7 +36,7 @@ alias sha1='shasum -a 1 '
 alias sha256='shasum -a 256 '
 alias pg='postgres -D /usr/local/var/postgres &'
 
-export PATH=$PATH:/usr/local/opt/apr/bin:$GRADLE_HOME/bin:$HOME/Documents/Dev/Environment/PostgreSQL/9.4/bin:/Users/dmccann/.rvm/bin:$HOME/Documents/Dev/Environment/sqlite-tools-osx-x86-3170000:$HOME/Documents/Dev/Environment/apache-maven-3.3.9/bin:$HOME/Documents/Dev/Environment/apache-ant-1.10.1/bin
+export PATH=$PATH:/usr/local/opt/apr/bin:$GRADLE_HOME/bin:$HOME/Documents/Dev/Environment/PostgreSQL/9.4/bin:/Users/dmccann/.rvm/bin:$HOME/Documents/Dev/Environment/sqlite-tools-osx-x86-3170000:$HOME/Documents/Dev/Environment/apache-maven-3.3.9/bin:$HOME/Documents/Dev/Environment/apache-ant-1.10.1/bin:/usr/local/mysql/bin:$HOME/pear/bin
 export JAVA_HOME=$(/usr/libexec/java_home)
 export TERM=xterm
 export MONO_PATH=/Library/Frameworks/Mono.framework/Libraries/mono/4.5
@@ -73,6 +73,69 @@ function bak {
 function mkurl {
   echo "[InternetShortcut]
 URL=$1" >> "${2}.url"
+}
+
+function xlunlock_usage {
+  echo "Usage: xlunlock <source xlsx file> <target unlocked xlsk file>"
+}
+
+function xlunlock {
+  curdir=$(pwd)
+  if [ -z "$1" ]; then
+    echo "Must provide source file"
+    xlunlock_usage
+  elif [ -z "$2" ]; then
+    echo "Must provide target file"
+    xlunlock_usage
+  elif [ "$1" = "$2" ]; then
+    echo "Source and target files must not match"
+    xlunlock_usage
+  elif [ -f "$2" ]; then
+    echo "$2 already exists"
+    xlunlock_usage
+  elif [ ! -f "$1" ]; then
+    echo "File not found: $1"
+    xlunlock_usage
+  else
+    echo "Unlocking $1..."
+    workdir=$(mktemp -d)
+    if [ ! -d "$workdir" ]; then
+      echo "Failed to create temporary working directory $workdir"
+      return 1
+    fi
+    cp "$1" "$workdir/source.xlsx"
+    cd "$workdir"
+    unzip source.xlsx
+    if [ $? -gt 0 ]; then 
+      echo "$1 isn't a valid .xlsx file (unzip failed)"
+      cd "$curdir"
+      rm -rf $workdir
+      return 2
+    fi
+    if [ ! -d xl/worksheets ]; then
+      echo "$1 isn't a valid .xlsx file (no worksheets directory)"
+      cd "$curdir"
+      rm -rf $workdir
+      return 3
+    fi
+    cd xl
+    mkdir worksheets_fixed
+    cp -rf worksheets/* worksheets_fixed/
+    cd worksheets
+    for sheet in $(grep -l sheetProtection *.xml); do
+      echo "Unprotecting $sheet..."
+      sed 's/<sheetProtection[^>]*\/>//g' $sheet > ../worksheets_fixed/$sheet
+    done
+    cd ..
+    rm -rf worksheets
+    mv worksheets_fixed worksheets
+    cd ..
+    rm source.xlsx
+    zip -r target.xlsx *
+    cd "$curdir"
+    mv "$workdir/target.xlsx" "$2"
+    rm -rf $workdir    
+  fi
 }
 
 # Setting PATH for Python 3.6

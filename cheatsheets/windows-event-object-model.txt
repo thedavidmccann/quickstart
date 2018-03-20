@@ -1,0 +1,5 @@
+wbemtest.exe
+set namespace to \root\wmi
+enum classes
+MSNT_SystemTrace
+
