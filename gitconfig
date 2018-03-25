@@ -1,6 +1,6 @@
 [user]
 	name = David McCann
-	email = dmccann@unfoundation.org
+	email = david.a.mccann@gmail.com 
 [color]
 	ui = auto
 # https://wincent.com/wiki/Git_quickstart
@@ -9,6 +9,7 @@
 	ci = commit
 	co = checkout
         purr = pull --rebase
+        pom = push origin master
         br = branch
 	cp = cherry-pick
 	unstage = reset HEAD --
@@ -26,3 +27,9 @@
 [core]
 	autocrlf = input
         excludesfile = ~/.gitignore 
+	precomposeunicode = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
