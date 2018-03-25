@@ -67,6 +67,7 @@ target/
 # Backups
 *~
 \#*\#
+.\#*
 
 # Mac
 .DS_Store
