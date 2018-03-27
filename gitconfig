@@ -1,6 +1,6 @@
 [user]
-	name = Jeff Wishnie
-	email = jeff@wishnie.org
+	name = David McCann
+	email = david.a.mccann@gmail.com 
 [color]
 	ui = auto
 # https://wincent.com/wiki/Git_quickstart
@@ -27,7 +27,8 @@
 	new = green black
 	commit = yellow black
 	whitespace = black red
-
+[push]
+	default = simple
 [core]
 	autocrlf = input
         excludesfile = ~/.gitignore 
