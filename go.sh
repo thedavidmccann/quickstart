@@ -16,8 +16,11 @@ ln -sf ~/Documents/Dev/Projects/quickstart/gitignore ~/.gitignore
 ln -sf ~/Documents/Dev/Projects/quickstart/tigrc ~/.tigrc
 cp .git-completion.bash ~/
 source ~/.bash_profile
-
+echo "Name?"
+read name
 echo "Email?"
 read email
-git config --global user.email "$email"
+echo "[user]" > ~/.gitident
+echo "	name = $name" >> ~/.gitident
+echo "	email = $email" >> ~/.gitident 
 
