@@ -14,6 +14,10 @@
 	cp = cherry-pick
 	unstage = reset HEAD --
 	last = log -1 HEAD
+	# a few extras for log viewing
+    	ls = log --pretty=format:\"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate
+        ll = log --pretty=format:\"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate --numstat
+        lds = log --pretty=format:\"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate --date=short
 [color "diff"]
 	meta = cyan black
 	plain = white black
@@ -23,7 +27,8 @@
 	new = green black
 	commit = yellow black
 	whitespace = black red
-
+[push]
+	default = simple
 [core]
 	autocrlf = input
         excludesfile = ~/.gitignore 
