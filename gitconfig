@@ -1,6 +1,6 @@
 [user]
 	name = David McCann
-	email = david.a.mccann@gmail.com 
+	email = david.a.mccann@gmail.com
 [color]
 	ui = auto
 # https://wincent.com/wiki/Git_quickstart
@@ -31,8 +31,11 @@
 	default = simple
 [core]
 	autocrlf = input
-        excludesfile = ~/.gitignore 
+	excludesfile = ~/.gitignore
 	precomposeunicode = true
+    	# attributesFile = ~/.gitattributes # better to check attributes file into repo that use a global one
+
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
