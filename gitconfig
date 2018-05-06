@@ -1,6 +1,5 @@
-[user]
-	name = David McCann
-	email = david.a.mccann@gmail.com
+[include]
+	path = ~/.gitident
 [color]
 	ui = auto
 # https://wincent.com/wiki/Git_quickstart
