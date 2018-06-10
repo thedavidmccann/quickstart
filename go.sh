@@ -13,6 +13,7 @@ ln -sf ~/Documents/Dev/Projects/quickstart/bash_profile ~/.bash_profile
 ln -sf ~/Documents/Dev/Projects/quickstart/vimrc ~/.vimrc
 ln -sf ~/Documents/Dev/Projects/quickstart/gitconfig ~/.gitconfig
 ln -sf ~/Documents/Dev/Projects/quickstart/gitignore ~/.gitignore
+ln -sf ~/Documents/Dev/Projects/quickstart/gitattributes ~/.gitattributes
 ln -sf ~/Documents/Dev/Projects/quickstart/tigrc ~/.tigrc
 cp .git-completion.bash ~/
 source ~/.bash_profile

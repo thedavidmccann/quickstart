@@ -32,7 +32,7 @@
 	autocrlf = input
 	excludesfile = ~/.gitignore
 	precomposeunicode = true
-    	# attributesFile = ~/.gitattributes # better to check attributes file into repo that use a global one
+    	attributesFile = ~/.gitattributes
 
 
 [filter "lfs"]
