@@ -244,3 +244,6 @@ Procfile    text
 *.Rdx       binary
 *.Rmd		text
 *.R  		text
+
+# Gitlab
+*.plist gitlab-language=xml
