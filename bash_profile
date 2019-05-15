@@ -34,7 +34,7 @@ alias tdb='tail -f /usr/local/var/postgres/pg_log/$(ls -tr /usr/local/var/postgr
 alias dunnet='emacs -batch -l dunnet'
 alias sha1='shasum -a 1 '
 alias sha256='shasum -a 256 '
-alias pg='postgres -D /usr/local/share/postgresql &'
+alias pg='brew services start postgresql'
 
 export PATH=$PATH:/usr/local/opt/apr/bin:$GRADLE_HOME/bin:$HOME/Documents/Dev/Environment/PostgreSQL/9.4/bin:/Users/dmccann/.rvm/bin:$HOME/Documents/Dev/Environment/sqlite-tools-osx-x86-3170000:$HOME/Documents/Dev/Environment/apache-maven-3.3.9/bin:$HOME/Documents/Dev/Environment/apache-ant-1.10.1/bin:/usr/local/mysql/bin:$HOME/pear/bin
 export JAVA_HOME=$(/usr/libexec/java_home)
