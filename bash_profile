@@ -1,4 +1,5 @@
 alias fuck='sudo $(history -p \!\!)' 
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export GRADLE_HOME=/Users/dmccann/Documents/Dev/Environment/gradle-2.6
 export CLICOLOR=1
 export LSCOLORS=exgagaxxbaxxxxbabaeaea

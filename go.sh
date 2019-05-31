@@ -1,5 +1,7 @@
 #!/bin/bash
 # Bootstrap a new goddamn Mac
+brew install python && pip install virtualenv && pip install virtualenvwrapper
+
 mkdir -p ~/.bash_profile.d
 mkdir -p ~/Documents/Dev/Projects
 mv ../quickstart ~/Documents/Dev/Projects
