@@ -1,0 +1,2 @@
+copy (select * from foo) to 'Users/dmccann/Desktop/file.csv' with csv delimiter ',';
+
