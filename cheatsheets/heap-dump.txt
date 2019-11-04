@@ -1,0 +1,1 @@
+jmap -dump:file=mav.bin <pid>

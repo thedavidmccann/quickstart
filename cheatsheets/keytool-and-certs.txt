@@ -1,0 +1,9 @@
+openssl s_client -showcerts -connect domaincontroller.demonet.local:636
+
+keytool -import -alias virustotal.com -file virustotal.pem -keystore truststore.jks
+
+keytool -v -list -keystore localdev.jks
+
+
+# change password
+keytool -storepasswd -keystore localdev.jks

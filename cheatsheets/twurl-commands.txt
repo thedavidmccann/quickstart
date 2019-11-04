@@ -1,0 +1,2 @@
+twurl /1.1/users/lookup.json?screen_name=some_asshole
+
