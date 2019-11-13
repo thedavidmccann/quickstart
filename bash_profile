@@ -38,7 +38,7 @@ alias sha256='shasum -a 256 '
 alias pg='brew services start postgresql'
 
 export PATH=$PATH:/usr/local/opt/libpq/bin:/usr/local/opt/apr/bin:$GRADLE_HOME/bin:$HOME/Documents/Dev/Environment/PostgreSQL/9.4/bin:/Users/dmccann/.rvm/bin:$HOME/Documents/Dev/Environment/sqlite-tools-osx-x86-3170000:$HOME/Documents/Dev/Environment/apache-maven-3.6.1/bin:$HOME/Documents/Dev/Environment/apache-ant-1.10.1/bin:/usr/local/mysql/bin:$HOME/pear/bin
-# export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=$(which java | xargs readlink -f | sed "s:/bin/java::")
 export TERM=xterm
 export MONO_PATH=/Library/Frameworks/Mono.framework/Libraries/mono/4.5
 export NUNIT3_PATH=/Users/dmccann/Documents/Dev/Environment/NUnit-3.4.1/bin
