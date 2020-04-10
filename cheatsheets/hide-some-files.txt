@@ -1,0 +1,7 @@
+zip -0 -r files.zip dir_w_private_file_names
+zip -e encrypted.zip files.zip readme.txt pub_file0...
+split -b 20m encrypted.zip split
+cat split* > unified.zip
+unzip unified.zip
+unzip files.zip
+

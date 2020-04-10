@@ -1,0 +1,1 @@
+zip -r -e zipfile.zip dir_to_zip
