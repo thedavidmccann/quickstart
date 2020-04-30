@@ -1,3 +1,5 @@
 gpg --full-generate-key
 gpg --list-secret-keys
 gpg --armor --export ID | pbcopy
+https://gist.github.com/thedavidmccann/25ed8e3007074a77a4f440c9bc7eb8f5
+
