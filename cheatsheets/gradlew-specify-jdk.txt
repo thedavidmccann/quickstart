@@ -1,0 +1,1 @@
+./gradlew -Dorg.gradle.java.home=/path_to_jdk_directory
