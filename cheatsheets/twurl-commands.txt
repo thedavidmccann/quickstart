@@ -1,2 +1,3 @@
 twurl /1.1/users/lookup.json?screen_name=some_asshole
-
+twurl set default secret_account
+twurl "/1.1/statuses/user_timeline.json?screen_name=some_asshole&count=200"

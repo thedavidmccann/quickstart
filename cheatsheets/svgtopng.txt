@@ -1,0 +1,1 @@
+qlmanage -t -s 200 -o . svg_file.svg

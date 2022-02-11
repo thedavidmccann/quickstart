@@ -1,0 +1,1 @@
+git log2g --boundary mybranch ^master
