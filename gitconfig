@@ -43,3 +43,5 @@
 	required = true
 [user]
 	email = david.a.mccann@gmail.com
+[pull]
+	rebase = true

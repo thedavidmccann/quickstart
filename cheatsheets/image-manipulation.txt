@@ -1,3 +1,4 @@
 sips -Z 640 #(max height & width)
 sips -p 640 640 --padColor FFFFFF #Fill image to 640x640 square with white pixels
 sips -s format png file.jpg --out file.png
+montage *.jpg -mode Concatenate -tile 6x1 montage.jpg #put some images together
