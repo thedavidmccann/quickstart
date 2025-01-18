@@ -16,7 +16,7 @@
 * text=auto
 
 ## WEB SOURCE CODE
-*.bat      text eol=crlf
+*.bat      -text
 *.coffee   text
 *.css      text
 *.htm      text
