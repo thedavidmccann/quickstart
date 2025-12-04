@@ -1,0 +1,4 @@
+# run parallel processing across a file system.
+
+ls -1 | xargs -I $ -P 4 run-this-command-in-parallel "$"
+find -type f | xargs #same idea

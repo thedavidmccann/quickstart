@@ -1,0 +1,1 @@
+nmap -O -f --spoof-mac de:ad:be:ef:ca:fe -sV --version-intensity 9 -p1-65535 1.1.1.1
