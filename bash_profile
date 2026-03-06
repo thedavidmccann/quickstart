@@ -148,3 +148,14 @@ export PATH
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
 export PATH
+
+# man pager color formatting
+export LESS_TERMCAP_mb=$(printf '\e[01;31m') # Red
+export LESS_TERMCAP_md=$(printf '\e[01;35m') # Magenta
+export LESS_TERMCAP_me=$(printf '\e[0m')
+export LESS_TERMCAP_se=$(printf '\e[0m')
+export LESS_TERMCAP_so=$(printf '\e[01;33m') # Yellow background
+export LESS_TERMCAP_ue=$(printf '\e[0m')
+export LESS_TERMCAP_us=$(printf '\e[04;36m') # Cyan
+export MANROFFOPT="-c"
+
