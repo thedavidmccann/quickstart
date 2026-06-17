@@ -1,0 +1,13 @@
+tmux (open new session)
+exit (leave open session)
+
+tmux new -s my-session
+
+tmux attach -t session_name
+
+// Start a new session or attach to an existing session named mysession
+tmux new-session -A -s mysession
+
+ctrl-b d # detach from session
+
+tmux ls # list sessions

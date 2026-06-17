@@ -1,0 +1,3 @@
+# get all pcaps inside a particular dir, print the tcp payload in ascii, grep for hello message, get the count
+find . -type f -name "*.pcap" | xargs -P 20 -I {} tshark -r {} -T fields -e tcp.payload | xxd -r -p | grep -a -F "search string" | wc -l
+

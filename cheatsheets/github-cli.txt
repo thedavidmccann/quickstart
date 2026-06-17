@@ -1,0 +1,11 @@
+gh api /repos/org/repo/actions/artifacts
+
+# this will return X consecutive objects with attribute "artifacts", an array of 100 (or less for the final page)
+gh api /repos/org/repo/actions/artifacts --paginate > artifacts_paginated.json
+
+# get all the artifacts from workflow runs that weren't against main
+cat artifacts_paginated.json | jq '.artifacts[] | select(.workflow_run.head_branch != "main")'
+
+cat artifacts_paginated.json | jq '.artifacts[] | select(.workflow_run.head_branch == "main")' | jq -s 'map(.id)'
+
+gh api /repos/org/repo/actions/artifacts --paginate | jq '.artifacts[] | select(.workflow_run.head_branch != "main")'
